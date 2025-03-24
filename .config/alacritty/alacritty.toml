@@ -1,0 +1,71 @@
+[window]
+padding = { x = 5, y = 5 }
+opacity = 1
+[font]
+normal = { family = "Fira Code", style = "Bold" }
+bold = { family = "Operator Mono", style = "Bold" }
+italic = { family = "Operator Mono", style = "Italic" }
+bold_italic = { family = "Operator Mono", style = "Bold Italic" }
+size = 10
+
+
+# # Default colors
+# [colors.primary]
+# background = '#000b1e'
+# foreground = '#0abdc6'
+
+# [colors.cursor]
+# text = '#000b1e'
+# cursor = '#0abdc6'
+
+# # Normal colors
+# [colors.normal]
+# black = '#123e7c'
+# red = '#ff0000'
+# green = '#d300c4'
+# yellow = '#f57800'
+# blue = '#123e7c'
+# magenta = '#711c91'
+# cyan = '#0abdc6'
+# white = '#d7d7d5'
+
+# # Bright colors
+# [colors.bright]
+# black = '#1c61c2'
+# red = '#ff0000'
+# green = '#d300c4'
+# yellow = '#f57800'
+# blue = '#00ff00'
+# magenta = '#711c91'
+# cyan = '#0abdc6'
+# white = '#d7d7d5'
+[colors.primary]
+background = '#171d23'
+foreground = '#ffffff'
+
+# Cursor colors
+[colors.cursor]
+text = '#fafafa'
+cursor = '#008b94'
+
+# Normal colors
+[colors.normal]
+black = '#333f4a'
+red = '#d95468'
+green = '#8bd49c'
+blue = '#539afc'
+magenta = '#b62d65'
+cyan = '#70e1e8'
+white = '#b7c5d3'
+
+
+# Bright colors
+[colors.bright]
+black = '#41505e'
+red = '#d95468'
+green = '#8bd49c'
+yellow = '#ebbf83'
+blue = '#5ec4ff'
+magenta = '#e27e8d'
+cyan = '#70e1e8'
+white = '#ffffff'

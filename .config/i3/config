@@ -52,6 +52,7 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+f exec thunar
+bindsym $mod+Print exec "flameshot gui"
 # kill focused window
 bindsym $mod+Shift+q kill
 

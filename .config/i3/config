@@ -183,6 +183,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+for_window [class="^.*"] border pixel 0
 
 
 # Cyberpunk color scheme

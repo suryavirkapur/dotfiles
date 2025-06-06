@@ -5,7 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias l='exa -l -a'
+alias ls='exa -l -a'
+alias c='clear'
+alias g='git'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
@@ -25,3 +28,8 @@ export PATH=$HOME/.local/bin:$PATH
 eval "$(starship init bash)"
 
 alias dot='/usr/bin/git --git-dir=/home/svk/.config/dotfiles --work-tree=$HOME'
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$PATH:/home/svk/.cargo/bin"

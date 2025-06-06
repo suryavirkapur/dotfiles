@@ -203,12 +203,52 @@ bindsym $mod+r mode "resize"
 exec_always xrandr --output HDMI-0 --mode 1920x1080
 exec_always flameshot
 exec --no-startup-id feh --bg-scale ~/Wallpaper/cyberpunk-mclaren-supercars-neon-art-2560x1440-1003.jpg
+exec --no-startup-msg autorandr -c
+exec --no-startup-id xset s off -dpms
+exec_always --no-startup-id ~/.config/i3/display_setup.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
+
 bar {
     status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
+    output DP-4
+    position bottom
+    colors {
+        # bar background color
+        background $bg
+        # text color used for blocks that do not have a color specified.
+        statusline $blue
+        # workspaces section
+        #                    border  backgr. text
+        focused_workspace    $purple $purple $bg
+        inactive_workspace   $darkgray $darkgray $blue
+        active_workspace    $darkgray $darkgray $blue
+        urgent_workspace    $red $red $bg
+    }
+}
+
+bar {
+    # status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
+    output DP-0
+    position bottom
+    colors {
+        # bar background color
+        background $bg
+        # text color used for blocks that do not have a color specified.
+        statusline $blue
+        # workspaces section
+        #                    border  backgr. text
+        focused_workspace    $purple $purple $bg
+        inactive_workspace   $darkgray $darkgray $blue
+        active_workspace    $darkgray $darkgray $blue
+        urgent_workspace    $red $red $bg
+    }
+}
+
+bar {
+    # status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
     output HDMI-0
     position bottom
     colors {
@@ -224,6 +264,7 @@ bar {
         urgent_workspace    $red $red $bg
     }
 }
+
 
 # class                 border|backgr|text|indicator|child_border
 client.focused          $purple $purple $bg $blue $darkgray

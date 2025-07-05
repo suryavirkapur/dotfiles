@@ -10,6 +10,8 @@ alias ls='exa -l -a'
 alias c='clear'
 alias g='git'
 alias grep='grep --color=auto'
+alias podman=docker
+alias npm=pnpm
 PS1='[\u@\h \W]\$ '
 
 export NVM_DIR="$HOME/.nvm"
@@ -33,3 +35,9 @@ alias dot='/usr/bin/git --git-dir=/home/svk/.config/dotfiles --work-tree=$HOME'
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:/home/svk/.cargo/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/svk/google-cloud-sdk/path.bash.inc' ]; then . '/home/svk/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/svk/google-cloud-sdk/completion.bash.inc' ]; then . '/home/svk/google-cloud-sdk/completion.bash.inc'; fi

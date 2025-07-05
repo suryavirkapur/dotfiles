@@ -1,8 +1,34 @@
 [general]
-separator = ""
-separator_block_width = 0
+separator = "-"
+separator_block_width = 1
+
+
+[[block]]
+block = "custom"
+command = "echo '\uf0ac ' `curl -6 bot.whatismyipaddress.com`" # assumes fontawesome icons
+interval = 60
 
 [[block]]
 block = "time"
 interval = 5
 format = " $timestamp.datetime(f:'%a %d/%m %R')"
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "custom"
+json = true
+command = ''' echo "{\"icon\":\"ping\",\"text\":\"`ping -c4 1.1.1.1 | tail -n1 | cut -d'/' -f5`\"}" '''
+interval = 60
+[[block.click]]
+button = "left"
+cmd = "<command>"
+
+[[block]]
+block = "custom"
+command = "sed 's/  //' <(curl 'https://wttr.in/?format=1' -s)"
+interval = 600

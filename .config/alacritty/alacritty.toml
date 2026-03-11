@@ -1,6 +1,7 @@
 [window]
 padding = { x = 5, y = 5 }
 opacity = 1.0
+
 [font]
 normal = { family = "IBM Plex Mono", style = "Medium" }
 bold = { family = "IBM Plex Mono", style = "Bold" }
